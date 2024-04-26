@@ -1,9 +1,9 @@
 @extends('admin.layouts.app')
 
-@section('title', 'Novo Usuário')
+@section('title', 'Editar Usuário')
 
 @section('content')
-    <h1>Novo Usuário</h1>
+    <h1>Editar Usuário {{ $user->name }}</h1>
 
     @if ($errors->any())
         <ul>
@@ -13,10 +13,11 @@
         </ul>
     @endif
 
-    <form action="{{ route('users.store') }}" method="post">
+    <form action="{{ route('users.update', $user->id) }}" method="post">
         @csrf
-        <input type="text" name="name" id="name" placeholder="Nome" value="{{ old('name') }}">
-        <input type="email" name="email" id="email" placeholder="E-mail" value="{{ old('email') }}">
+        @method('put')
+        <input type="text" name="name" id="name" placeholder="Nome" value="{{ $user->name }}">
+        <input type="email" name="email" id="email" placeholder="E-mail" value="{{ $user->email }}">
         <input type="password" name="password" id="password" placeholder="Senha">
         <input type="submit" value="Cadastrar">
     </form>
