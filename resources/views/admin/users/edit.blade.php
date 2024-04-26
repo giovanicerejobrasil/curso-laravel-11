@@ -13,6 +13,6 @@
         <input type="text" name="name" id="name" placeholder="Nome" value="{{ $user->name }}">
         <input type="email" name="email" id="email" placeholder="E-mail" value="{{ $user->email }}">
         <input type="password" name="password" id="password" placeholder="Senha">
-        <input type="submit" value="Cadastrar">
+        <input type="submit" value="Editar">
     </form>
 @endsection
