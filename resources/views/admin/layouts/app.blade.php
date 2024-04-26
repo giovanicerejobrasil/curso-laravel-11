@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>@yield('title') - Giovani Brasil</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>@yield('title') - Giovani Brasil</title>
+
+    <!-- Scripts -->
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
+
 <body>
-  <header>Header Default</header>
-  @yield('content')
-  <footer>Footer Default</footer>
+    <header>Header Default</header>
+    @yield('content')
+    <footer>Footer Default</footer>
 </body>
+
 </html>
